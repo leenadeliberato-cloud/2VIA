@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#009B3A" />
+  <title>Neoenergia | Pagamento da Fatura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="payment-card" aria-labelledby="paymentTitle">
+      <header class="payment-header">
+        <img src="assets/logo.svg" alt="Neoenergia" style="max-height: 40px;">
+      </header>
+      <div class="card-content">
+        <h1 id="paymentTitle">Pagamento da Fatura de Energia</h1>
+        <p class="intro">Realize o pagamento da sua fatura de forma simples e segura.</p>
+        <section class="amount-box" aria-label="Resumo do pagamento">
+          <span>Valor a pagar</span>
+          <strong id="paymentAmount">R$ 152,40</strong>
+        </section>
+        <section class="qr-area" aria-label="Pagamento por QR Code">
+          <div class="qr-frame"><img id="pixQrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=00020126580014br.gov.bcb.pix" alt="QR Code Pix"></div>
+          <p>Escaneie o QR Code com seu aplicativo do banco.</p>
+        </section>
+        <section class="copy-area" aria-labelledby="copyTitle">
+          <h2 id="copyTitle">Copia e Cola</h2>
+          <div class="copy-control">
+            <input id="pixCode" type="text" readonly aria-label="Código Pix" value="00020126580014br.gov.bcb.pix0136a1b2c3d4-e5f6-7890-abcd-ef12345678905204000053039865802BR5925NEOENERGIA PAGAMENTOS6009SALVADOR62070503***6304A13F">
+            <button id="copyButton" type="button" aria-label="Copiar código Pix"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M15 9V5.5A1.5 1.5 0 0 0 13.5 4h-9A1.5 1.5 0 0 0 3 5.5v9A1.5 1.5 0 0 0 4.5 16H9"/></svg><span>Copiar</span></button>
+          </div>
+        </section>
+        <button class="pay-button" type="button">Confirmar e Pagar</button>
+      </div>
+    </section>
+    <p class="security-note"><span aria-hidden="true">🔒</span> Ambiente seguro para seu pagamento</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
